@@ -1,1 +1,14 @@
 
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main() {
+	int A,B,V;
+	int num;
+	scanf("%d %d %d", &A,&B,&V);
+
+	num = (V - B - 1) / (A - B) + 1;
+	printf("%d", num);
+	
+}
+
