@@ -1,0 +1,32 @@
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include <stdlib.h>
+int main(){
+	int i,num,j, k;
+	int score[1000];
+	double nscore[1000];
+	double max = 0, sum = 0;
+	scanf("%d", &num);
+
+	for (i = 0; i < num ; i++) {
+		scanf("%d", &score[i]);
+	}
+
+	for (j = 0; j < num; j++)
+	{
+		if (score[j] > max) {
+			max = score[j];
+		}
+
+	}
+	for (k = 0; k < num; k++)
+	{
+		sum += (score[k] / max * 100.0);
+	
+	}
+	double avg = sum / num;
+	printf("%0.2lf", avg);
+	return 0;
+}
+
