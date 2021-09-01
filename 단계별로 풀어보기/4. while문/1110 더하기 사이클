@@ -1,0 +1,25 @@
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main(){
+	int num;
+	scanf("%d", &num);
+	int count = 0;
+	int keep = num;
+	int A, B, C, D;
+	while (1)
+	{
+		A = num / 10;
+		B = num % 10;
+		C = (A + B) % 10;
+		D = B * 10 + C;
+		num = D;
+		count++;
+		if (keep == num)
+		{
+			break;
+		}
+	}
+	printf("%d", count);
+}
+
