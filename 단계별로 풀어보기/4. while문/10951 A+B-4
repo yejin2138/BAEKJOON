@@ -1,0 +1,14 @@
+
+#include<stdio.h>
+int main()
+{
+	int a,b,count=1, num=1, i,j;
+	while (scanf("%d %d", &count, &num)!=EOF)
+	{
+		
+		printf("%d\n", count + num);
+		
+	}
+	return 0;
+}
+
