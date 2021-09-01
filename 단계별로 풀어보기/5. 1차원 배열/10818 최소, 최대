@@ -1,0 +1,22 @@
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include <stdlib.h>
+int main(){
+	int num,i, min = 1000001, max = -1000001;
+	scanf("%d", &num);
+	int* arr = (int*)malloc(sizeof(int)*num);
+	//int arr[num];
+	for (i = 0; i < num; i++) {
+		scanf("%d", &arr[i]);
+		if (min > arr[i]) {
+			min = arr[i];
+		}
+		if (max < arr[i]) {
+			max = arr[i];
+		}
+	}
+	printf("%d %d", min, max);
+	return 0;
+}
+
