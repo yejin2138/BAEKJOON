@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <string.h>
+int main(void) {
+	int num,sum,add;
+	char score[100];
+
+	scanf("%d", &num);
+	for (int i = 0; i < num; i++) {
+        sum=0,add=0;
+		scanf("%s", score);
+		for (int j = 0; j < strlen(score); j++) {
+			if (score[j] == 'O') {
+				sum = sum +1+add;
+				add++;
+			}
+			else  add = 0; 
+		}
+		printf("%d\n", sum);
+	}
+    return 0;
+}
+
