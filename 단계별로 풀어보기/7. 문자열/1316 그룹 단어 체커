@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+	int i, n, ans, tmp;
+	char word[101];
+	
+	scanf("%d", &n);
+
+	ans = 0;
+	
+	int cnt = n;
+
+	while(cnt--) {
+		scanf("%s", word);
+
+		tmp = word[0] % 97;
+
+		int alpha[26] = {0,};
+
+		for (i = 1; i < strlen(word); i++) {
+			if (tmp != word[i] % 97) {
+				if (alpha[word[i] % 97] != 0) {
+					n--;
+					break;
+				}
+				else {
+					alpha[tmp] = 1;
+					tmp = word[i] % 97;
+				}
+			}
+		}
+	}
+
+	printf("%d\n", n);
+
+	return 0;
+}
+
