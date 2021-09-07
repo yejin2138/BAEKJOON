@@ -1,0 +1,17 @@
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main() {
+	int num1,i,sum=0;
+	char num2[100];
+	scanf("%d", &num1);
+	for (i = 0; i <num1; i++)
+	{
+		scanf("%1d",&num2[i]);
+		sum += num2[i];
+	}
+	
+	printf("%d", sum);
+}
+
