@@ -1,0 +1,27 @@
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int result;
+int sum,n;
+int d(n) {
+	sum = n;
+	while (n > 0) {
+		sum += n % 10;
+		n /= 10;
+	}
+	return sum;
+}
+int main() {
+	int arr[10000] = { 0, };
+	for (int i = 0; i < 10000; i++) {
+		result = d(i);
+		if (result < 10000)
+			arr[result] = 1;
+	}
+	for (int i= 1; i < 10000; i++) {
+		if (arr[i] != 1) {
+			printf("%d\n", i);
+		}
+	}
+}
+
