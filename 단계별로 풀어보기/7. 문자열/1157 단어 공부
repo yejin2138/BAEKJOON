@@ -1,0 +1,36 @@
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main() {
+	int i=0,max=0,index;
+	char S[1000001] ;
+	int sum[26] = { 0, };
+
+	scanf("%s", S);
+
+	while (S[i] != '\0') {
+		if (S[i] < 97) {
+			S[i] += 32;
+		}
+		sum[S[i] - 97]++;
+		i++;
+	}
+	for (i = 0; i <26; i++) {
+		if (max < sum[i]) {
+			max = sum[i];
+			index = i;
+		}
+		else if (max == sum[i]) {
+			index = -1;
+		}
+		
+	}
+	if (index != -1) {
+		printf("%c", 'A' + index);
+	}
+	else {
+		printf("?");
+	}
+}
+
